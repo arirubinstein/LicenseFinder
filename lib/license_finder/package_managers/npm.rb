@@ -1,4 +1,8 @@
-require 'json'
+begin
+    require "json"
+rescue Gem::LoadError => e
+end 
+
 
 module LicenseFinder
   class NPM < PackageManager
